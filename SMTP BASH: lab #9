@@ -1,0 +1,7 @@
+#!/bin/bash
+i=0
+while read line
+do i=$(($i+1));
+sendemail -f (ingresar correo) -t $line -s smtp.gmail.com:587 -u "PRUEBA CORREO" -m "PRUEBA DE CORREO" -v -xu (ingresar usuario) -xp (ingresar contraseña) -o tls=yes
+done < "/home/direccion del archivo/correos"
+echo "Final line count is: $i";
